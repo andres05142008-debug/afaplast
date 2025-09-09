@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afaplast | Fábrica de Pelotas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background: url('img/bultos.png') center/cover no-repeat;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4caf50;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✅";
+      margin-right: 10px;
+    }
+
+    .cta {
+      background-color: #ff5722;
+      color: #fff;
+      display: inline-block;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #e64a19;
+    }
+
+    /* Carrusel */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+
+    .carousel-buttons button {
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: white;
+      font-size: 2em;
+      padding: 5px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9em;
+    }
+
+    .whatsapp {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebe5b;
+    }
+
+    .contacto {
+      margin-top: 40px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .qr {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .qr img {
+      max-width: 180px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Afaplast</h1>
+    <p>Fábrica de pelotas para piscinas de pelotas y productos plásticos de alta calidad</p>
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      En <strong>Afaplast</strong> nos especializamos en la fabricación de pelotas resistentes para piscinas de pelotas, diseñadas para soportar hasta <strong>60 kg</strong>. También ofrecemos servicios de soplado de productos plásticos personalizados, ideales para centros comerciales, salones de juegos y familias.
+    </p>
+
+    <h2>¿Qué ofrecemos?</h2>
+    <ul>
+      <li>Pelotas resistentes y duraderas</li>
+      <li>Materiales seguros y no tóxicos</li>
+      <li>Amplia variedad de colores y tamaños</li>
+      <li>Ideales para niños y adultos</li>
+      <li>Servicio de soplado de productos plásticos a medida</li>
+    </ul>
+
+    <h2>Catálogo de Productos</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="img/bultos-2.png" alt="Pelotas multicolores en bolsa">
+        <img src="img/amarillo.png" alt="Pelotas amarillas y rojas">
+        <img src="img/bultos.png" alt="Pelotas varias combinaciones">
+        <img src="img/bulto.png" alt="Bolsa de pelotas vertical multicolor">
+        <img src="img/maletin.png" alt="Maletín Play Ball con 100 pelotas">
+      </div>
+      <div class="carousel-buttons">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+
+    <h2>Fabricamos calidad. Entregamos confianza.</h2>
+    <p>
+      Nuestra misión es brindar productos que combinen diseño, resistencia y seguridad. Porque para nosotros, la diversión también debe ser segura y duradera.
+    </p>
+
+    <div style="text-align:center;">
+      <a href="https://wa.me/573225455760" class="whatsapp" target="_blank">
+        📲 Contáctanos por WhatsApp
+      </a>
+    </div>
+
+    <div class="qr">
+      <h2>O escaneá el código QR</h2>
+      <img src="img/qr.png" alt="QR WhatsApp Afaplast">
+    </div>
+
+    <div class="contacto">
+      <p><strong>Teléfono:</strong> +57 322 545 5760</p>
+      <p><strong>Email:</strong> andres05142008@gmail.com</p>
+    </div>
+
+    <a href="#comprar" class="cta">¡Comprá ahora!</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Afaplast. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const slides = document.querySelectorAll('.carousel img');
+    let index = 0;
+
+    function updateCarousel() {
+      track.style.transform = translateX(${-index * 100}%);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+  </script>
+
+</body>
+</html>
